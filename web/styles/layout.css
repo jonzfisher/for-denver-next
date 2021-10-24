@@ -38,6 +38,9 @@ body {
   font-size: 36px;
   width: 100%;
   text-align: center;
+  @media (--media-max-medium) {
+    font-size: 24px;
+  }
 }
 
 html,
