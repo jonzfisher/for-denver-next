@@ -39,7 +39,7 @@ function Hero (props) {
   return (
     <div className={styles.root} style={style}>
       <div className={styles.content}>
-        <SVG src={urlFor(logo).width(600).url()} className={styles.logo} />
+        <img src={urlFor(logo).width(600).url()} className={styles.logo} />
         <div className={styles.tagline}>{tagline && <SimpleBlockContent blocks={tagline} />}</div>
         <h1 className={styles.title}>We are <strong>FOR DENVER.</strong></h1>
         {ctas && (
