@@ -15,9 +15,12 @@
   justify-content: flex-end;
   height: calc(100vh - 4px);
 
-  @media (--media-min-min) {
-    padding-right: 5vw;
-    padding-bottom: 4rem;
+  @media (--media-max-medium) {
+    padding-top: 10vh;
+  }
+  @media (--media-min-small) {
+    padding-right: 0vw;
+    padding-bottom: 8rem;
   }
   @media (--media-min-large) {
     padding-right: 10vw;
