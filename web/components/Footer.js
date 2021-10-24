@@ -11,6 +11,12 @@ function Footer (props) {
     <div className={styles.root}>
       <nav>
         <ul className={styles.items}>
+          <li className={styles.item}>
+            <a href="https://journeypoint.org/">Journey Point</a>
+          </li>
+          <li className={styles.item}>
+            <a href="https://www.riversidedenver.com/">Riverside</a>
+          </li>
           {navItems &&
             navItems.map(item => {
               const isActive =
@@ -32,9 +38,6 @@ function Footer (props) {
             })}
         </ul>
       </nav>
-      <div className={styles.text}>
-        <SimpleBlockContent blocks={text} />
-      </div>
     </div>
   )
 }

@@ -28,6 +28,16 @@ export default {
       type: 'cta',
       title: 'Call to action',
     },
+    {
+      name: 'layout',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Side by side', value: 'two-column'},
+          {title: 'Overlay', value: 'overlay'}
+        ], 
+      }
+    }
   ],
   preview: {
     select: {

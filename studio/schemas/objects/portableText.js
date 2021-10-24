@@ -23,6 +23,7 @@ export default {
       },
     },
     { type: 'figure' },
+    { type: 'linkedImage' },
     { type: 'embedHTML' },
   ],
 };

@@ -13,6 +13,8 @@ import siteConfig from './documents/siteConfig';
 import cta from './objects/cta';
 import embedHTML from './objects/embedHTML';
 import figure from './objects/figure';
+import linkedImage from './objects/linkedImage';
+
 import internalLink from './objects/internalLink';
 import link from './objects/link';
 import portableText from './objects/portableText';
@@ -33,6 +35,7 @@ export default createSchema({
     cta,
     embedHTML,
     figure,
+    linkedImage,
     hero,
     imageSection,
     internalLink,

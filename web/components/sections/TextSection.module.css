@@ -3,9 +3,12 @@
 
 .root {
   padding: 2rem 0;
+  font-size: 16px;
 
   @media (--media-min-medium) {
     padding: 4rem 0;
+    text-align: center;
+    font-size: 24px;
   }
 }
 
@@ -26,8 +29,12 @@
 }
 
 .heading {
-  font-size: var(--font-title3-size);
+  color: #DB4D46;
+  font-size: 24px;
   line-height: var(--font-title3-line-height);
+  @media (--media-min-medium) {
+    font-size: 32px;
+  }
 }
 
 .label+.heading {

@@ -2,53 +2,66 @@
 @import '../../styles/custom-properties.css';
 
 .root {
-  composes: center from '../../styles/shared.module.css';
   position: relative;
   background-color: var(--color-black, #000);
   color: var(--color-white, #fff);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  padding-top: 20vh;
   padding-bottom: 2rem;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  height: calc(100vh - 4px);
 
-  @media (--media-min-medium) {
+  @media (--media-min-min) {
+    padding-right: 5vw;
     padding-bottom: 4rem;
+  }
+  @media (--media-min-large) {
+    padding-right: 10vw;
+    padding-bottom: 4rem;
+  }
+  @media (--media-min-x-large) {
+    padding-right: 10vw;
+    padding-bottom: 4rem;
+  }
+  @media(--media-max-large) {
+    background-position: center right;
   }
 }
 
-.root::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  background-image: linear-gradient(#2220, #222e);
-  width: 100%;
-  height: 50%;
-  z-index: 0;
-}
-
 .content {
-  width: 100%;
-  max-width: var(--width-small);
+  width: 100vw;
+  text-align: center;
+  max-width: 700px;
   padding: 0 1.5em;
   box-sizing: border-box;
   z-index: 1;
 }
 
+.logo svg {
+  width: 300px;
+  height: auto;
+}
+
 .title {
-  position: relative;
+  text-align: center;
+
   font-weight: 600;
-  font-size: var(--font-title2-size);
+  font-size: 64px;
   line-height: var(--font-title2-line-height);
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
   margin: 0;
   padding: 0;
-  padding-top: 12.5rem;
+  padding-top: 2rem;
 
+  font-size: 32px;
   @media (--media-min-medium) {
     font-size: var(--font-title1-size);
     line-height: var(--font-title1-line-height);
-    padding-top: 15rem;
+    padding-top: 4rem;
   }
 }
 
@@ -59,11 +72,16 @@
   margin-top: 0.5em;
   margin-bottom: 1rem;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-
+  font-weight: 700;
+  font-size: 24px;
   @media (--media-min-medium) {
-    font-size: var(--font-large-size);
+    font-size: 36px;
     line-height: var(--font-large-line-height);
   }
+}
+  
+strong {
+  background: linear-gradient(180deg,rgba(255,255,255,0) 50%, #C8342D 50%, #DB4D46 100%);
 }
 
 .tagline > p {

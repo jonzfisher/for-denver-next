@@ -9,10 +9,34 @@ import Cta from '../Cta'
 const builder = imageUrlBuilder(client)
 
 function ImageSection (props) {
-  const {heading, label, text, image, cta} = props
+  const {heading, label, text, image, cta, layout} = props
 
   if (!image) {
     return null
+  }
+
+  if (layout === 'two-column') {
+    return (
+      <div className={styles.twoColumnContainer} >
+        <div className={styles.twoColumn}>
+          <img
+            src={builder
+              .image(image)
+              .auto('format')
+              .width(2000)
+              .url()}
+            className={styles.column}
+            alt={heading}
+          />
+          <div className={styles.captionBoxColumn}>
+            <div className={styles.columnLabel}>{label}</div>
+            <h2 className={styles.columnTitle}>{heading}</h2>
+            {text && <SimpleBlockContent blocks={text} />}
+            {cta && <Cta {...cta} />}
+          </div>
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -51,6 +75,7 @@ ImageSection.propTypes = {
       _ref: PropTypes.string
     })
   }),
+  layout: PropTypes.string,
   backgroundImage: PropTypes.string,
   tagline: PropTypes.string,
   cta: PropTypes.object

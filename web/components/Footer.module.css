@@ -4,7 +4,8 @@
   color: var(--color-black, #333);
   font-size: var(--font-small-size);
   line-height: var(--font-small-line-height);
-  padding: 2rem 0;
+  height: 64px;
+  background: linear-gradient(180deg, #C8342D 2.6%, #DB4D46 100%);
 }
 
 .items {
@@ -19,7 +20,8 @@
   @nest & > a {
     display: block;
     text-decoration: none;
-    color: inherit;
+    color: white;
+    font-weight: 600;
     padding: 1.5rem 0.5rem;
   }
 }

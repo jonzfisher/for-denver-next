@@ -27,9 +27,62 @@
   line-height: var(--font-title3-line-height);
 }
 
+.columnLabel + .columnTitle {
+  margin-top: 0.1em;
+}
+
+.columnTitle {
+  font-size: 2rem;
+}
+
+.columnLabel {
+  font-size: 1rem;
+}
+
 .image {
   display: block;
   width: 100%;
+}
+
+.twoColumn {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  background-color: var(--color-white);
+  max-width: var(--width-large);
+  margin: 0 auto;
+  @media (--media-max-medium) {
+    flex-direction: column;
+  }
+}
+.twoColumnContainer {
+  width: 100%;
+  background-color: var(--color-white);
+}
+
+.column {
+  display: inline-block;
+  width: 45%;
+  @media (--media-max-medium) {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.captionBoxColumn {
+  background-color: #000;
+  opacity: 0.8;
+  padding: 1.5rem;
+  width: 50%;
+  mix-blend-mode: difference;
+  color: #fff;
+  max-width: 40rem;
+
+  @media (--media-max-medium) {
+    width: 100%;
+    padding-top: 1rem;
+    padding: 0.5rem;
+  }
 }
 
 .content {
@@ -65,7 +118,7 @@
 
 .captionBox {
   background-color: var(--color-white);
-  border: 1px solid var(--color-black);
+  opacity: 0.8;
   padding: 1.5rem;
 
   @media (--media-min-medium) {
